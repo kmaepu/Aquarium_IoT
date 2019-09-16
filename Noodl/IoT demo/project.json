@@ -1,0 +1,1046 @@
+{
+    "name": "IoT demo",
+    "components": [
+        {
+            "name": "/Main",
+            "graph": {
+                "connections": [],
+                "roots": [
+                    {
+                        "id": "a4ad7525-be82-b3a7-2e97-c2521e822fa4",
+                        "type": "Page",
+                        "x": 219,
+                        "y": 154,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "cb21d2e8-3a51-5540-c4a9-41128fe9c30c",
+                                "type": "Pages",
+                                "x": 20,
+                                "y": 46,
+                                "parameters": {
+                                    "startPage": "/Top page"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "name": "/Top page",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "566de7e0-6ee8-591d-2f55-3bdf676827a6",
+                        "fromProperty": "d1",
+                        "toId": "7fe8cd73-e37e-8b7d-c5f3-2c37bf950d24",
+                        "toProperty": "data"
+                    },
+                    {
+                        "fromId": "566de7e0-6ee8-591d-2f55-3bdf676827a6",
+                        "fromProperty": "d2",
+                        "toId": "19971238-1d2e-41fa-85c3-ea5d1f674daf",
+                        "toProperty": "data"
+                    },
+                    {
+                        "fromId": "7fe8cd73-e37e-8b7d-c5f3-2c37bf950d24",
+                        "fromProperty": "formatted",
+                        "toId": "517f55b9-e1c8-b79b-fa7b-bc9c31dca091",
+                        "toProperty": "value"
+                    },
+                    {
+                        "fromId": "19971238-1d2e-41fa-85c3-ea5d1f674daf",
+                        "fromProperty": "formatted",
+                        "toId": "ec1cc608-efc3-d9cf-f542-15db6bcca703",
+                        "toProperty": "value"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "53c0b99b-ba87-bf43-6c31-53fc03be0ff5",
+                        "type": "Page",
+                        "label": "Top Page",
+                        "x": 137,
+                        "y": 95,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "bcbc09df-94ec-7070-94e8-08b7a8fd0808",
+                                "type": "Group",
+                                "label": "Root",
+                                "x": 20,
+                                "y": 61,
+                                "parameters": {
+                                    "fill": "parent"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": [
+                                    {
+                                        "id": "13519fb6-694f-ed1b-397d-b702d0660033",
+                                        "type": "Rectangle",
+                                        "label": "Background",
+                                        "x": 20,
+                                        "y": 61,
+                                        "parameters": {
+                                            "color": "#00FDFF"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "750ddf35-d353-32a0-60e6-656ce5eb5a96",
+                                        "type": "Text",
+                                        "label": "Top page",
+                                        "x": 20,
+                                        "y": 122,
+                                        "parameters": {
+                                            "alignX": "center",
+                                            "alignY": "top",
+                                            "text": "Top page",
+                                            "fontSize": 150,
+                                            "color": "#000000",
+                                            "sizeMode": "childSize"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "65c860c6-51f7-b8a0-6ae5-3e5af7c3effe",
+                                        "type": "/Parts/Navigate Button",
+                                        "label": "Navigate Button",
+                                        "x": 20,
+                                        "y": 183,
+                                        "parameters": {
+                                            "Destination": "/Control page"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "86e75430-63b3-d7b5-5d72-3b03bcf3d009",
+                                        "type": "Stack Layout",
+                                        "x": 20,
+                                        "y": 229,
+                                        "parameters": {
+                                            "width": {
+                                                "value": 80,
+                                                "unit": "%"
+                                            },
+                                            "height": {
+                                                "value": 70,
+                                                "unit": "%"
+                                            },
+                                            "alignX": "center",
+                                            "alignY": "center"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": [
+                                            {
+                                                "id": "517f55b9-e1c8-b79b-fa7b-bc9c31dca091",
+                                                "type": "/Parts/Display value",
+                                                "label": "Temp",
+                                                "x": 20,
+                                                "y": 46,
+                                                "parameters": {
+                                                    "Color": "#000000",
+                                                    "value": "20℃"
+                                                },
+                                                "ports": [],
+                                                "dynamicports": [],
+                                                "children": []
+                                            },
+                                            {
+                                                "id": "ec1cc608-efc3-d9cf-f542-15db6bcca703",
+                                                "type": "/Parts/Display value",
+                                                "label": "Water level",
+                                                "x": 20,
+                                                "y": 143,
+                                                "parameters": {
+                                                    "Color": "#FF2600",
+                                                    "value": "10cm"
+                                                },
+                                                "ports": [],
+                                                "dynamicports": [],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "566de7e0-6ee8-591d-2f55-3bdf676827a6",
+                        "type": "Receive Message",
+                        "x": -49,
+                        "y": 216,
+                        "parameters": {
+                            "topic": "Noodl/sub"
+                        },
+                        "ports": [
+                            {
+                                "name": "d1",
+                                "plug": "outputs",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "group": "Payload",
+                                "index": 1
+                            },
+                            {
+                                "name": "d2",
+                                "plug": "outputs",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "group": "Payload",
+                                "index": 2
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "7fe8cd73-e37e-8b7d-c5f3-2c37bf950d24",
+                        "type": "String Format",
+                        "label": "Temp Format",
+                        "x": -28,
+                        "y": 351,
+                        "parameters": {
+                            "format": "{data}℃"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "data",
+                                "type": "*",
+                                "plug": "input",
+                                "index": 2
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "19971238-1d2e-41fa-85c3-ea5d1f674daf",
+                        "type": "String Format",
+                        "label": "Water level Format",
+                        "x": -18,
+                        "y": 467,
+                        "parameters": {
+                            "format": "{data}cm"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "data",
+                                "type": "*",
+                                "plug": "input",
+                                "index": 2
+                            }
+                        ],
+                        "children": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "/Control page",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "4e59fb9d-c8d6-bf20-c88d-ff84b8111595",
+                        "fromProperty": "States",
+                        "toId": "ba3f7152-41c7-6664-3bf6-ae52c4a8e37f",
+                        "toProperty": "command"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "93ea758b-cd4d-95a2-6c8c-457b3e00714d",
+                        "type": "Page",
+                        "label": "Control Page",
+                        "x": 440.0788089022196,
+                        "y": 402.88642915599604,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "763b9e8c-365b-0f3f-1539-a209f658bcc9",
+                                "type": "Group",
+                                "label": "Root",
+                                "x": 20,
+                                "y": 61,
+                                "parameters": {
+                                    "fill": "parent"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": [
+                                    {
+                                        "id": "cb71727b-9e8b-ff49-dd3f-86ecc7b47cf0",
+                                        "type": "Rectangle",
+                                        "label": "Background",
+                                        "x": 576.0788089022196,
+                                        "y": 590.886429155996,
+                                        "parameters": {
+                                            "color": "#00F900"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "780b9d74-a524-d3d0-94a2-88d367efc789",
+                                        "type": "Text",
+                                        "label": "Title",
+                                        "x": 582.0788089022196,
+                                        "y": 648.886429155996,
+                                        "parameters": {
+                                            "alignX": "center",
+                                            "alignY": "center",
+                                            "text": "Control page",
+                                            "fontSize": 150,
+                                            "color": "#000000",
+                                            "sizeMode": "childSize"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "4e59fb9d-c8d6-bf20-c88d-ff84b8111595",
+                                        "type": "/On Off Buton",
+                                        "x": 20,
+                                        "y": 183,
+                                        "parameters": {
+                                            "Align Y": "center",
+                                            "Position Y": 350
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "9d53cd24-58a3-1b7c-74ec-b3e08fab304d",
+                                        "type": "/Parts/Navigate Button",
+                                        "x": 20,
+                                        "y": 183,
+                                        "parameters": {
+                                            "Destination": "/Top page"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ba3f7152-41c7-6664-3bf6-ae52c4a8e37f",
+                        "type": "Send Message",
+                        "x": 248.74547556888626,
+                        "y": 583.386429155996,
+                        "parameters": {
+                            "topic": "/sub/pump",
+                            "publishOnInputsChanged": true,
+                            "rateLimit": true,
+                            "maxMessagesPerSecond": 1,
+                            "format": "json"
+                        },
+                        "ports": [
+                            {
+                                "name": "command",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "group": "Payload",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "/Parts/Navigate Button",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "886debd1-dda0-1094-78a7-ef3a93054717",
+                        "fromProperty": "touch.tap",
+                        "toId": "f2fdba0e-10e1-54a3-94ca-1f779f7d6947",
+                        "toProperty": "navigate"
+                    },
+                    {
+                        "fromId": "6eeebb66-71bb-94f7-17f2-c549d1e19246",
+                        "fromProperty": "Destination",
+                        "toId": "f2fdba0e-10e1-54a3-94ca-1f779f7d6947",
+                        "toProperty": "destination"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "819dd2d1-27bb-2bea-4c8f-66af7d7cb821",
+                        "type": "Group",
+                        "version": 2,
+                        "label": "Bottom Group",
+                        "x": 525.3333333333333,
+                        "y": 276,
+                        "parameters": {
+                            "height": {
+                                "value": 15,
+                                "unit": "%"
+                            },
+                            "alignX": "center",
+                            "alignY": "bottom"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "886debd1-dda0-1094-78a7-ef3a93054717",
+                                "type": "Rectangle",
+                                "label": "Navigate Button",
+                                "x": 150,
+                                "y": 451,
+                                "parameters": {
+                                    "width": {
+                                        "value": 50,
+                                        "unit": "%"
+                                    },
+                                    "height": {
+                                        "value": 80,
+                                        "unit": "%"
+                                    },
+                                    "alignX": "center",
+                                    "alignY": "center",
+                                    "y": 0,
+                                    "blur": 20
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "2f0c7afb-6837-4cce-bfb8-4f9d80712a43",
+                                "type": "Text",
+                                "version": 2,
+                                "x": 150,
+                                "y": 548,
+                                "parameters": {
+                                    "alignX": "center",
+                                    "alignY": "center",
+                                    "text": "Go to Control",
+                                    "color": "#000000",
+                                    "fontSize": 80
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "f2fdba0e-10e1-54a3-94ca-1f779f7d6947",
+                        "type": "Page Navigation",
+                        "x": 342,
+                        "y": 330.5,
+                        "parameters": {
+                            "destination": "/Control page"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "6eeebb66-71bb-94f7-17f2-c549d1e19246",
+                        "type": "Component Inputs",
+                        "x": 298,
+                        "y": 216,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "Destination",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "/Parts/Display value",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "e911d63c-2eaf-2ca3-0dd9-c2818a6c3c04",
+                        "fromProperty": "value",
+                        "toId": "57784493-7a0d-c43e-ce76-475215918b69",
+                        "toProperty": "text"
+                    },
+                    {
+                        "fromId": "e911d63c-2eaf-2ca3-0dd9-c2818a6c3c04",
+                        "fromProperty": "Color",
+                        "toId": "8e511d22-0177-753d-dc74-2055dfe20d5f",
+                        "toProperty": "color"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "d2b518a9-cc91-b49d-5be4-f1b834af5edd",
+                        "type": "Group",
+                        "version": 2,
+                        "x": 246,
+                        "y": 134,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "8e511d22-0177-753d-dc74-2055dfe20d5f",
+                                "type": "Circle",
+                                "label": "Flame Circle",
+                                "x": 20,
+                                "y": 46,
+                                "parameters": {
+                                    "width": {
+                                        "value": 500,
+                                        "unit": "px"
+                                    },
+                                    "alignX": "center",
+                                    "alignY": "center",
+                                    "color": "#00FDFF",
+                                    "blur": 20
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "495d899f-6335-7456-d69e-6600a9eaa446",
+                                "type": "Circle",
+                                "label": "Back Circle",
+                                "x": 20,
+                                "y": 143,
+                                "parameters": {
+                                    "alignX": "center",
+                                    "alignY": "center",
+                                    "width": {
+                                        "value": 450,
+                                        "unit": "px"
+                                    }
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "57784493-7a0d-c43e-ce76-475215918b69",
+                                "type": "Text",
+                                "version": 2,
+                                "x": 20,
+                                "y": 204,
+                                "parameters": {
+                                    "color": "#000000",
+                                    "alignX": "center",
+                                    "alignY": "center",
+                                    "fontSize": 140
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "e911d63c-2eaf-2ca3-0dd9-c2818a6c3c04",
+                        "type": "Component Inputs",
+                        "x": 37,
+                        "y": 114,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "value",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 1
+                            },
+                            {
+                                "name": "Color",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 2
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "/On Off Buton",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "d41c69c5-7a5f-3525-d588-c23f7faaa7c9",
+                        "fromProperty": "currentState",
+                        "toId": "f57cb1d1-7a73-01de-147e-9414948cf140",
+                        "toProperty": "text"
+                    },
+                    {
+                        "fromId": "3ffa50d0-cfea-0772-2387-7f6e129952e2",
+                        "fromProperty": "touch.tap",
+                        "toId": "d41c69c5-7a5f-3525-d588-c23f7faaa7c9",
+                        "toProperty": "toggle"
+                    },
+                    {
+                        "fromId": "d41c69c5-7a5f-3525-d588-c23f7faaa7c9",
+                        "fromProperty": "Color",
+                        "toId": "e7be4fe6-04a3-7b4c-f5dc-bc141b65452f",
+                        "toProperty": "blendValue"
+                    },
+                    {
+                        "fromId": "e7be4fe6-04a3-7b4c-f5dc-bc141b65452f",
+                        "fromProperty": "result",
+                        "toId": "bd94388a-38f6-10aa-d54e-7d7afd262356",
+                        "toProperty": "color"
+                    },
+                    {
+                        "fromId": "d41c69c5-7a5f-3525-d588-c23f7faaa7c9",
+                        "fromProperty": "Value",
+                        "toId": "6cfcc5e2-aa01-cfc6-8cb8-c7d78da47639",
+                        "toProperty": "States"
+                    },
+                    {
+                        "fromId": "d3fcd85b-ff73-2c5d-994b-199e6e15f36b",
+                        "fromProperty": "Position X",
+                        "toId": "3ffa50d0-cfea-0772-2387-7f6e129952e2",
+                        "toProperty": "x"
+                    },
+                    {
+                        "fromId": "d3fcd85b-ff73-2c5d-994b-199e6e15f36b",
+                        "fromProperty": "Position Y",
+                        "toId": "3ffa50d0-cfea-0772-2387-7f6e129952e2",
+                        "toProperty": "y"
+                    },
+                    {
+                        "fromId": "d3fcd85b-ff73-2c5d-994b-199e6e15f36b",
+                        "fromProperty": "Align X",
+                        "toId": "3ffa50d0-cfea-0772-2387-7f6e129952e2",
+                        "toProperty": "alignX"
+                    },
+                    {
+                        "fromId": "d3fcd85b-ff73-2c5d-994b-199e6e15f36b",
+                        "fromProperty": "Align Y",
+                        "toId": "3ffa50d0-cfea-0772-2387-7f6e129952e2",
+                        "toProperty": "alignY"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "3ffa50d0-cfea-0772-2387-7f6e129952e2",
+                        "type": "Group",
+                        "version": 2,
+                        "label": "Button Group",
+                        "x": 300.80551232002085,
+                        "y": 255,
+                        "parameters": {
+                            "alignX": "center",
+                            "alignY": "bottom",
+                            "height": {
+                                "value": 50,
+                                "unit": "%"
+                            }
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "bd94388a-38f6-10aa-d54e-7d7afd262356",
+                                "type": "Circle",
+                                "label": "Button Circle",
+                                "x": 303,
+                                "y": 556,
+                                "parameters": {
+                                    "width": {
+                                        "value": 500,
+                                        "unit": "px"
+                                    },
+                                    "alignX": "center",
+                                    "alignY": "center",
+                                    "color": "#00FDFF"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "f57cb1d1-7a73-01de-147e-9414948cf140",
+                                "type": "Text",
+                                "version": 2,
+                                "label": "Button Text",
+                                "x": 303,
+                                "y": 653,
+                                "parameters": {
+                                    "alignX": "center",
+                                    "alignY": "center",
+                                    "color": "#000000",
+                                    "fontSize": 200
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "d41c69c5-7a5f-3525-d588-c23f7faaa7c9",
+                        "type": "States",
+                        "x": 67,
+                        "y": 477.36028779919263,
+                        "parameters": {
+                            "states": "ON,OFF",
+                            "values": "Color,Value",
+                            "value-ON-Color": 1,
+                            "value-OFF-Color": 0,
+                            "duration-ON": 300,
+                            "duration-OFF": 300,
+                            "value-ON-Value": 1,
+                            "value-OFF-Value": 0
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "type": {
+                                    "name": "number",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "output",
+                                "group": "Values",
+                                "name": "Color",
+                                "index": 6
+                            },
+                            {
+                                "type": {
+                                    "name": "number",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "output",
+                                "group": "Values",
+                                "name": "Value",
+                                "index": 7
+                            },
+                            {
+                                "plug": "input",
+                                "type": "number",
+                                "group": "ON Values",
+                                "name": "value-ON-Color",
+                                "displayName": "Color",
+                                "editorName": "ON|Color",
+                                "index": 8
+                            },
+                            {
+                                "plug": "input",
+                                "type": "number",
+                                "group": "ON Values",
+                                "name": "value-ON-Value",
+                                "displayName": "Value",
+                                "editorName": "ON|Value",
+                                "index": 9
+                            },
+                            {
+                                "plug": "input",
+                                "type": {
+                                    "name": "enum",
+                                    "enums": [
+                                        {
+                                            "value": "easeOut",
+                                            "label": "Ease Out"
+                                        },
+                                        {
+                                            "value": "easeIn",
+                                            "label": "Ease In"
+                                        },
+                                        {
+                                            "value": "linear",
+                                            "label": "Linear"
+                                        },
+                                        {
+                                            "value": "easeInOut",
+                                            "label": "Ease In Out"
+                                        },
+                                        {
+                                            "value": "cubicBezier",
+                                            "label": "Cubic Bezier"
+                                        }
+                                    ]
+                                },
+                                "default": "easeOut",
+                                "displayName": "Easing Curve",
+                                "group": "ON Transition",
+                                "name": "transition-ON",
+                                "index": 10
+                            },
+                            {
+                                "plug": "input",
+                                "type": "number",
+                                "default": 300,
+                                "displayName": "Duration",
+                                "group": "ON Transition",
+                                "name": "duration-ON",
+                                "index": 11
+                            },
+                            {
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean",
+                                    "allowConnectionsOnly": true
+                                },
+                                "displayName": "To ON",
+                                "name": "to-ON",
+                                "group": "Go to state",
+                                "index": 12
+                            },
+                            {
+                                "plug": "output",
+                                "type": "boolean",
+                                "displayName": "At ON",
+                                "name": "at-ON",
+                                "group": "Current state",
+                                "index": 13
+                            },
+                            {
+                                "plug": "output",
+                                "type": "signal",
+                                "displayName": "Has Reached ON",
+                                "name": "reached-ON",
+                                "group": "Current state",
+                                "index": 14
+                            },
+                            {
+                                "plug": "input",
+                                "type": "number",
+                                "group": "OFF Values",
+                                "name": "value-OFF-Color",
+                                "displayName": "Color",
+                                "editorName": "OFF|Color",
+                                "index": 15
+                            },
+                            {
+                                "plug": "input",
+                                "type": "number",
+                                "group": "OFF Values",
+                                "name": "value-OFF-Value",
+                                "displayName": "Value",
+                                "editorName": "OFF|Value",
+                                "index": 16
+                            },
+                            {
+                                "plug": "input",
+                                "type": {
+                                    "name": "enum",
+                                    "enums": [
+                                        {
+                                            "value": "easeOut",
+                                            "label": "Ease Out"
+                                        },
+                                        {
+                                            "value": "easeIn",
+                                            "label": "Ease In"
+                                        },
+                                        {
+                                            "value": "linear",
+                                            "label": "Linear"
+                                        },
+                                        {
+                                            "value": "easeInOut",
+                                            "label": "Ease In Out"
+                                        },
+                                        {
+                                            "value": "cubicBezier",
+                                            "label": "Cubic Bezier"
+                                        }
+                                    ]
+                                },
+                                "default": "easeOut",
+                                "displayName": "Easing Curve",
+                                "group": "OFF Transition",
+                                "name": "transition-OFF",
+                                "index": 17
+                            },
+                            {
+                                "plug": "input",
+                                "type": "number",
+                                "default": 300,
+                                "displayName": "Duration",
+                                "group": "OFF Transition",
+                                "name": "duration-OFF",
+                                "index": 18
+                            },
+                            {
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean",
+                                    "allowConnectionsOnly": true
+                                },
+                                "displayName": "To OFF",
+                                "name": "to-OFF",
+                                "group": "Go to state",
+                                "index": 19
+                            },
+                            {
+                                "plug": "output",
+                                "type": "boolean",
+                                "displayName": "At OFF",
+                                "name": "at-OFF",
+                                "group": "Current state",
+                                "index": 20
+                            },
+                            {
+                                "plug": "output",
+                                "type": "signal",
+                                "displayName": "Has Reached OFF",
+                                "name": "reached-OFF",
+                                "group": "Current state",
+                                "index": 21
+                            },
+                            {
+                                "plug": "input",
+                                "type": {
+                                    "name": "enum",
+                                    "enums": [
+                                        "ON",
+                                        "OFF"
+                                    ]
+                                },
+                                "group": "States",
+                                "displayName": "Start at",
+                                "name": "startState",
+                                "default": "ON",
+                                "index": 22
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "e7be4fe6-04a3-7b4c-f5dc-bc141b65452f",
+                        "type": "Color Blend",
+                        "x": 57,
+                        "y": 337.3602877991927,
+                        "parameters": {
+                            "color 0": "#00FDFF",
+                            "color 1": "#FFFB00"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "6cfcc5e2-aa01-cfc6-8cb8-c7d78da47639",
+                        "type": "Component Outputs",
+                        "x": 47,
+                        "y": 252,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "States",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 2
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "d3fcd85b-ff73-2c5d-994b-199e6e15f36b",
+                        "type": "Component Inputs",
+                        "x": 25,
+                        "y": 104,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "Position X",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 1
+                            },
+                            {
+                                "name": "Position Y",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 2
+                            },
+                            {
+                                "name": "Align X",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 3
+                            },
+                            {
+                                "name": "Align Y",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 4
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ]
+            }
+        }
+    ],
+    "settings": {
+        "devices": "Default Device",
+        "Default Device.fillMode": "aspectFit",
+        "Default Device.canvasWidth": 1080,
+        "Default Device.canvasHeight": 1920,
+        "mqttUseExternalBroker": true,
+        "mqttBrokerUrl": ""
+    },
+    "rootNodeId": "a4ad7525-be82-b3a7-2e97-c2521e822fa4",
+    "version": "1"
+}
